@@ -970,6 +970,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "things-i-cant-afford"
+version = "0.1.0"
+dependencies = [
+ "cargo-watch 7.0.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "juniper 0.11.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "juniper_rocket 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rocket 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "thread_local"
 version = "0.3.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1150,16 +1160,6 @@ dependencies = [
  "nix 0.11.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "notify 4.0.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "what-i-cant-afford"
-version = "0.1.0"
-dependencies = [
- "cargo-watch 7.0.8 (registry+https://github.com/rust-lang/crates.io-index)",
- "juniper 0.11.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "juniper_rocket 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "rocket 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
