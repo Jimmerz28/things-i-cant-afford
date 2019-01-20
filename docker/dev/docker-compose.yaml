@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+    server:
+        build:
+          context: ../../
+          dockerfile: ./docker/dev/Dockerfile
+        volumes:
+            - ../../server:/server
+        command: /bin/sh -c "cargo watch -x build -x run"
+        ports:
+            - 8000:8000
