@@ -1,68 +1,96 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Things I Can't Afford
 
-## Available Scripts
+I like window shopping online, especially for future purchases or for inspiration (Pinterest, Tumblr, etc.)
 
-In the project directory, you can run:
+However, I like to have prices attached so I can have realistic goals for my future purchases which I currently use Coda.io for.
 
-### `npm start`
+Personally I can't stand Pinterest, Tumblr only suits half the role I wanted and Coda.io is closed source.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Plus this is something good to try out new shit in my spare time.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Technical Motivations
 
-### `npm test`
+### Frontend
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I wanted to stick with Facebooks's ecosystem i.e. `React`, `Flux`/`Redux`, `Flow`, `GraphQL` since I haven't yet worked too extensivly with `GraphQL`.
 
-### `npm run build`
+### Backend
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The goal here was to use a compiled langugage which meets my personal syntax taste and doesn't look like whomever developed the syntax threw up on the keyboard.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Also wanted to see the current state and ease of GraphQL integration.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Initially, I wanted to see if Server-Side Swift already had GraphQL implementations readily available either via [Vapor](https://vapor.codes/) or [Kitura](https://www.kitura.io/), but I wasn't impressed with the precursory research.
 
-### `npm run eject`
+Although, I am happy that IBM seems to be pushing or supporting Server-Side Swift.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Had my eye on `Rust` for awhile and found that there were several GraphQL frameworks in the wild and integration didn't seem overly difficult.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+So for now I'm going with `Rust` to firstly see how the integration with `GraphQL` goes and then `MongoDB`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Getting Started
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+@TODO: Flesh this out once the setup is complete
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Node.js
+* yarn
+* docker
+* docker-compose
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installing
 
-### Code Splitting
+Right now there's a React based website and a Rust based GraphQL server (and eventually a Mongo database).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+So first install our Node.js dependencies
 
-### Analyzing the Bundle Size
+```
+yarn install
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+And start the server with
 
-### Making a Progressive Web App
+```
+docker-compose -f docker/dev/docker-compose.yaml up --build
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+@TODO: Add server startup as a script to `package.json`
 
-### Advanced Configuration
+## Running the tests
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+@TODO: Write tests
 
-### Deployment
+## Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+@TODO: Figure out a good deployment process
 
-### `npm run build` fails to minify
+## Built With
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* [Rust](https://www.rust-lang.org/) - Server side language
+  * [Rocket](https://rocket.rs/) - Web framework for Rust
+  * [Juniper](https://github.com/graphql-rust/juniper) - GraphQL server lib for Rust
+* [Create React App](https://github.com/facebook/create-react-app) - Frontend project setup tool
+* [docker](https://www.docker.com/) - Containerizer
+* [docker-compose](https://docs.docker.com/compose/install/) - Containerizer orchestrator
+
+## Contributing
+
+Contributing is disabled for this project.
+
+## Versioning
+
+@TODO: Integrate automatic versioning
+
+## Authors
+
+* **James Daniel Holby**
+
+## License
+
+This project is licensed under the WTFPL - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) - README Template
+* [Coda.io](https://coda.io/welcome) - inspiration
